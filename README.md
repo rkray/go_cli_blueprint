@@ -2,13 +2,14 @@
 Blueprint for go cli programs
 
 # TODO
-- general program structure
-- start with go module
-- read comandline parameters
-- help page
+[x] general program structure 
+[x] start with go module
+[x] read comandline parameters
+[x] help page
+[] signal handline, what happens when interupting by CTR+C
 
 # Compile
-    go build
+    ./make.sh build && ./go_cli_blueprint help
 
 # Cleanup
     go clean

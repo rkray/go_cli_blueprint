@@ -14,5 +14,8 @@
 # VIM Swap Files
 *.swp
 
+# binaries hsould not be shecked in
+go_cli_blueprint
+
 # Dependency directories (remove the comment below to include it)
 # vendor/

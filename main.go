@@ -1,8 +1,11 @@
+// Author: René Kray <rene@kray.info>
+// Date:   2022-01-02
+
 package main
 import (
-    "fmt"
+    "github.com/rkray/go_cli_blueprint/cmd"
 )
 
 func main(){
-    fmt.Println("GO CLI Blueprint")
+    cmd.Exec(version.Id)
 }
