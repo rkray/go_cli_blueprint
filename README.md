@@ -10,7 +10,7 @@ Blueprint for go cli programs
 - [ ] use local parameters
 - [x] help page
 - [ ] signal handling, what happens when interupting by CTR+C
-- [ ] support for json/yaml config files in $HOME/.progname\_(json|jaml).cfg and $HOME/.config/progname/config.(json|yaml)
+- [ ] support for json/yaml config files in $HOME/.progname\_(json|yaml).cfg and $HOME/.config/progname/config.(json|yaml)
 
 # Compile
     ./make.sh build && ./go_cli_blueprint help
