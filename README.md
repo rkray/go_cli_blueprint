@@ -6,7 +6,7 @@ Blueprint for go cli programs
 - [x] start with go module
 - [x] read comandline parameters
 - [x] help page
-- [] signal handline, what happens when interupting by CTR+C
+- [ ] signal handline, what happens when interupting by CTR+C
 
 # Compile
     ./make.sh build && ./go_cli_blueprint help
