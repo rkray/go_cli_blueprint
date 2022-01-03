@@ -3,9 +3,8 @@
 
 package cmd
 import (
-    "fmt"
+    //"fmt"
     "github.com/spf13/cobra"
-    "os"
 )
 
 var rootCmd = &cobra.Command{
@@ -13,6 +12,7 @@ var rootCmd = &cobra.Command{
     Short:   "GO CLI Blueprint",
     Long:    `Just a blueprint for small CLI application.
               Add some functionality.`,
+    ValidArgs: []string{"v","q"},
     Run:     func(cmd *cobra.Command, args []string) {
         general()
     },
@@ -21,16 +21,14 @@ var rootCmd = &cobra.Command{
 var Verbose bool
 var Quiet bool
 
-func Exec(version string) {
-    rootCmd.Version="1.2.3"
+func Exec(version_id string) {
+    // set version string
+    rootCmd.Version=version_id
+    cobra.CheckErr(rootCmd.Execute())
+}
+
+func init(){
     // global flags
     rootCmd.PersistentFlags().BoolVarP(&Verbose, "verbose", "v", false, "verbose output")
-    rootCmd.PersistentFlags().BoolVarP(&Verbose, "quiet",   "q", false, "suppress any output")
-    // commands
-    rootCmd.AddCommand(cmdList)
-    err:= rootCmd.Execute()
-    if err != nil{
-        fmt.Println(err)
-        os.Exit(1)
-    }
+    rootCmd.PersistentFlags().BoolVarP(&Quiet,   "quiet",   "q", false, "suppress any output")
 }

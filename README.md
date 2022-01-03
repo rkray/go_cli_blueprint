@@ -9,6 +9,7 @@ Blueprint for go cli programs
 - [ ] define local flags
 - [ ] use local parameters
 - [x] help page
+- [ ] Unit tests
 - [ ] signal handling, what happens when interupting by CTR+C
 - [ ] support for json/yaml config files in $HOME/.progname\_(json|yaml).cfg and $HOME/.config/progname/config.(json|yaml)
 
